@@ -5,7 +5,7 @@ from bmi_calculator import calculate_bmi
 
 def save_to_file(people, filename):
     # Your existing save_to_file function here
-
+    pass
 people = []
 while True:
     name = get_valid_name_user()
@@ -13,10 +13,10 @@ while True:
     height = get_valid_height()
     bmi = calculate_bmi(weight, height)
     person = {
-        "Name": name,
-        "Weight (kg)": weight,
-        "Height (cm)": height,
-        "BMI": bmi,
+        "name": name,
+        "weight": weight,
+        "height": height,
+        "bmi": bmi,
     }
     people.append(person)
     another_person = input("Enter 'yes' if you need to enter a new person: ")
@@ -26,4 +26,4 @@ while True:
 save_to_file(people, "bmi.txt")
 
 for person in people:
-    print(f"Name: {person['Name']}, Weight: {person['Weight (kg)']:.1f} kg, Height: {person['Height (cm')} cm, BMI: {person['BMI']:.2f}")
+    print(f"Name: {person['name']}, Weight: {person['weight']:.1f} kg, Height: {person['height']} cm, BMI: {person['bmi']:.2f}")

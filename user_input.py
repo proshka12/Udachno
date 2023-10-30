@@ -1,3 +1,6 @@
+from validators import is_valid_name, is_valid_height, is_valid_weight
+
+
 def get_valid_name_user():
     while True:
         name_user = input("Enter your name (from 4 to 20 symbols): ")
